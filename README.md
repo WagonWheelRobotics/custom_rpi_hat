@@ -14,7 +14,7 @@ Compass on GNSS Module
  - LIS3MDL (0x1E)
  - IST8308 (0x0E)
 
-## UART4
+## UART4(Pi5)/5(Pi4)
 GNSS NEO-M8N Serial port (https://store.mrobotics.io/product-p/m10034-solo.htm)
 
 # Prerequisites
@@ -22,9 +22,10 @@ GNSS NEO-M8N Serial port (https://store.mrobotics.io/product-p/m10034-solo.htm)
 ## I2C
 I2C should be enabled in raspi-conf.
 
-## UART4 (Raspberry Pi4/5)
+## UART4,5 (Raspberry Pi4/5)
 Add these lines to /boot/config.txt
 ```
 enable_uart=1
 dtoverlay=uart4
+dtoverlay=uart5
 ```
