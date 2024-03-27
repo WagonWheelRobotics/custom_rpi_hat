@@ -17,6 +17,9 @@ Compass on GNSS Module
 ## UART4(Pi5)/5(Pi4)
 GNSS NEO-M8N Serial port (https://store.mrobotics.io/product-p/m10034-solo.htm)
 
+## GPIO18
+GNSS NEO-M8N PPS Line is jumpered from GNSS module to the connector
+
 # Prerequisites
 
 ## I2C
@@ -28,4 +31,10 @@ Add these lines to /boot/config.txt
 enable_uart=1
 dtoverlay=uart4
 dtoverlay=uart5
+
+# falling edge
+#dtoverlay=pps-gpio,gpiopin=18,assert_falling_edge=true
+
+# rising edge
+dtoverlay=pps-gpio,gpiopin=18
 ```
